@@ -1,0 +1,35 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url(../images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+.heading{
+    font-size: 40px;
+    color: crimson;
+}
+.questionblock
+{
+    height: 50vh;
+    width: 50%;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.que
+{
+    font-size: 28px;
+    color: black;
+}
+.options,.submit
+{
+    padding: 5px;
+}

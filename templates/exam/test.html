@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %} <!--  pahle staticfiles use krte the static ki jagah -->
+    <html lang="en">
+
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/testStyle.css' %}">
+    </head>
+
+    <body>
+        <div class="heading">
+            <h1>Hello, Guest</h1>
+        </div>
+        <div class="questionblock">
+            <div class="que">
+                <h2>{{que}}</h2>
+                {% if level %}
+                  <h3>{{level}}</h3>
+                {% else %}
+                    level not defind
+                {% endif %}
+            </>
+            <div class="options"> <input type="radio" name="answer"><span>{{a}}</span> </div>
+            <div class="options"> <input type="radio" name="answer"><span>{{b}}ie</span> </div>
+            <div class="options"> <input type="radio" name="answer"><span>{{c}}strup</span> </div>
+            <div class="options"> <input type="radio" name="answer"><span>{{d}}</span> </div>
+            <div class="submit"> <input type="submit"> </div>
+        </div>
+    </body>
+
+    </html>

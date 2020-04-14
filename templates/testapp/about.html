@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+{%load app_tags %}
+{% get_date as today %}    <!-- make get_tag as variable so use double curly brackets  -->
+<html lang="en">
+
+<head>
+    <style>
+        .listDiv {
+            background-color: aqua;
+            color: crimson;
+        }
+
+        .color-1 {
+            color: blue;
+        }
+        .dateTime{
+            background-color: deeppink;
+        }
+    </style>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <h1 class="color-1">{{msg}}</h1>
+    <h1>{{msg|quotes}}</h1>
+    <h1 class="color-1">upper case: {{hello|upper}}</h1>
+    <h1 class="color-1">word count of hello msg is: {{hello|wordcount}}</h1>
+    <h1 class="color-1">make first capital: {{hello|capfirst}}</h1>
+    <div class="listDiv">
+        <h1>list1 is {{list1}}</h1>
+        <h1>length: {{list1|length}}</h1>
+        <h1>first element:{{list1|first}}</h1>
+        <h1>last element: {{list1|last}}</h1>
+    </div>
+    <h1>{{x}} is divisible by 3: {{x|divisibleby:"3"}}</h1>
+    <div class="dateTime">
+      
+   <h1>Today is {{today}}</h1>
+    <h1>{{today|date:"D"}}</h1>  <!-- D means day ,d means date -->
+    <h1>{{today|date:"D M Y"}}</h1>
+    <h1>{{today|date:"d m y"}}</h1>
+    <h1>{{today|date}}</h1>
+    <h1>{{today|date:"d/m/Y"}}</h1>
+    
+    </div>
+</body>
+
+</html>
